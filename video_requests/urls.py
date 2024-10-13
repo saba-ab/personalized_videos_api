@@ -1,4 +1,4 @@
-from django.urls import path
+from django.urls import path, include
 from .views import VideoRequestCreateView, VideoRequestListView, CreatePaymentView, ExecutePaymentView
 
 urlpatterns = [
@@ -10,5 +10,4 @@ urlpatterns = [
     path('create-payment/<int:video_request_id>/',
          CreatePaymentView.as_view(), name='create_payment'),
     path('execute-payment/', ExecutePaymentView.as_view(), name='execute_payment'),
-
 ]
